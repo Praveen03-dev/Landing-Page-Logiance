@@ -33,7 +33,7 @@ export default function HighlightedFeature({ title, description, iconName }: Hig
   
   return (
     <div 
-      className={`bg-white rounded-lg p-6 h-[252px] w-[252px] relative border border-gray-100
+      className={`bg-[#F8FAFC] rounded-lg p-6 h-[252px] w-[252px] relative border border-gray-100
         transition-all duration-300 ease-in-out 
         ${isHovered ? 'shadow-xl scale-[1.03] z-10' : 'shadow-md'}`}
       onMouseEnter={() => setIsHovered(true)}

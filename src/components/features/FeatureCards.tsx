@@ -56,32 +56,44 @@ export default function FeatureCards() {
     { id: 28, title: "Refund trigger rules", iconName: "refund-trigger" },
   ]
 
+  // Helper function to determine fade level of a column
+  const getColumnFadeClass = (id: number) => {
+    // Outermost columns (most faded)
+    const outermostIds = [1, 2, 3, 4, 25, 26, 27, 28];
+    // Second level columns (slightly faded)
+    const secondLevelIds = [5, 6, 7, 8, 21, 22, 23, 24];
+    
+    if (outermostIds.includes(id)) return "opacity-60"; // Most faded
+    if (secondLevelIds.includes(id)) return "opacity-80"; // Slightly faded
+    return ""; // No fading for central columns
+  }
+
   return (
-    <div className="relative overflow-hidden">
-      {/* Simplified Radial Blur Effect */}
+    <div className="relative overflow-hidden max-w-[1400px] mx-auto">
+      {/* Soft radial gradient for background effect */}
       <div 
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] opacity-70 pointer-events-none z-0"
-        style={{
-          background: 'radial-gradient(circle, rgba(50, 52, 134, 0.1) 0%, rgba(50, 52, 134, 0.05) 30%, rgba(50, 52, 134, 0) 70%)',
-          filter: 'blur(40px)',
-        }}
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] opacity-60 pointer-events-none z-0"
       />
 
       {/* Fixed grid layout with proper column and row definitions */}
       <div 
-        className="relative z-10 mx-auto max-w-[1400px] grid gap-2 md:gap-6"
+        className="relative z-10 grid gap-4 md:gap-6"
         style={{
           gridTemplateColumns: 'repeat(10, minmax(0, 1fr))',
           gridTemplateRows: 'repeat(4, auto)',
-          gridAutoFlow: 'dense' // Helps prevent overlap
+          gridAutoFlow: 'dense'
         }}
       >
         {features.map((feature) => {
+          // Get the appropriate fade class based on column position
+          const fadeClass = getColumnFadeClass(feature.id);
+          
           // Regular small feature cards
           if (![13, 14, 15, 16].includes(feature.id)) {
             return (
               <div
                 key={feature.id}
+                className={`${fadeClass} transition-opacity duration-300`}
                 style={{
                   gridColumn: (() => {
                     if (feature.id === 1 || feature.id === 2 || feature.id === 3 || feature.id === 4) return '1';
@@ -130,6 +142,7 @@ export default function FeatureCards() {
                   return 'auto';
                 })()
               }}
+              // Removed shadow-lg class that was causing the box-like appearance
             >
               <HighlightedFeature 
                 title={feature.title} 
