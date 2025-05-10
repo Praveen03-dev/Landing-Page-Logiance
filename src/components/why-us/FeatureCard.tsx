@@ -14,7 +14,7 @@ export default function FeatureCard({ title, description, icon, content }: Featu
         <div className="flex-1 mb-2">
           {content}
         </div>
-        <div className="bg-[#F1F5F9] p-4 rounded-lg relative w-[500px] h-[144px]">
+        <div className="bg-[#F1F5F9] p-4 rounded-b-lg relative w-[500px] h-[144px]">
           <div className="absolute top-4 right-4">
             {icon}
           </div>
