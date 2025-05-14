@@ -15,25 +15,25 @@ export default function FeatureGrid() {
       title: "Connect Your Store",
       description: "Instantly sync with Shopify, WooCommerce, or any other platform in seconds.",
       icon: <ConnectYourStoreIcon />,
-      content: <ConnectYourStoreImage />,
+      content: <ConnectYourStoreImage className="rounded-t-[16px]"/>,
     },
     {
       title: "Sync & Import Orders",
       description: "Auto-import orders from all your sales channels into one dashboard.",
       icon: <SyncAndImportIcon />,
-      content: <SyncAndImportImage />,
+      content: <SyncAndImportImage className="rounded-t-[16px]"/>,
     },
     {
       title: "Pick the Best Courier",
       description: "Let our smart engine recommend the fastest, cheapest, and most reliable partner.",
       icon: <PickTheBestCourierIcon />,
-      content: <PickTheBestCourierImage />,
+      content: <PickTheBestCourierImage className="rounded-t-[16px]"/>,
     },
     {
       title: "Ship, Track & Manage Returns",
       description: "Schedule pickups, track every shipment, and handle NDRs & returns like a pro.",
       icon: <ShipTrackAndManageReturnsIcon />,
-      content: <ShipTrackAndManageReturnsImage />,
+      content: <ShipTrackAndManageReturnsImage className="rounded-t-[16px]"/>,
     },
   ]
 

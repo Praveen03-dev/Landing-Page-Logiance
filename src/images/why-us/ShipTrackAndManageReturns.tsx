@@ -3,6 +3,7 @@ interface ShipTrackAndManageReturnsImageProps {
     height?: number | string;
     fill?: string;
     weight?: number | string;
+    className?: string;
   }
   
   export const ShipTrackAndManageReturnsImage = ({
@@ -10,9 +11,10 @@ interface ShipTrackAndManageReturnsImageProps {
     height = 16,
     fill = "#334155",
     weight = 2,
+    className = "",
   }: ShipTrackAndManageReturnsImageProps) => {
     return (
-        <svg width="500" height="240" viewBox="0 0 500 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="500" height="240" viewBox="0 0 500 240" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
         <g clipPath="url(#clip0_684_27335)">
         <rect width="500" height="240" fill="#F8FAFC"/>
         <path d="M374 93.5C399.371 92.1235 408.967 92.3787 423 93.5" stroke="black" strokeOpacity="0.09" strokeWidth="2" strokeLinecap="round" strokeDasharray="12 12"/>

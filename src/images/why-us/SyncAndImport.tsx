@@ -3,6 +3,7 @@ interface SyncAndImportImageProps {
     height?: number | string;
     fill?: string;
     weight?: number | string;
+    className?: string;
   }
   
   export const SyncAndImportImage = ({
@@ -10,9 +11,10 @@ interface SyncAndImportImageProps {
     height = 16,
     fill = "#334155",
     weight = 2,
+    className = "",
   }: SyncAndImportImageProps) => {
     return (
-        <svg width="500" height="240" viewBox="0 0 500 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="500" height="240" viewBox="0 0 500 240" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
         <g clipPath="url(#clip0_684_26893)">
         <rect width="500" height="240" fill="#F8FAFC"/>
         <path d="M4 7C102 14.5 38.5 143.5 143 132" stroke="black" strokeOpacity="0.09" strokeWidth="2" strokeLinecap="round" strokeDasharray="12 12"/>

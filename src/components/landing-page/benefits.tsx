@@ -9,10 +9,10 @@ export default function Benefits() {
     <div className="flex flex-col items-center max-w-7xl mx-auto px-4 py-6">
       {/* Heading and Subtitle */}
       <div className="text-center mb-8">
-        <h1 className="text-[#020617] text-4xl font-bold mb-2 h-[41.28px]">
+        <h1 className="font-Geist font-[126] text-[48px] text-[#020617] mb-2">
           What you fix with us
         </h1>
-        <p className="text-[#64748B] h-[19.04px]">
+        <p className="font-Satoshi font-[400] text-[20px] text-[#64748B]">
           Everything that slows you down? Gone.
         </p>
       </div>

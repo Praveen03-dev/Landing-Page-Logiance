@@ -34,7 +34,7 @@ export default function HighlightedFeature({ title, description, iconName }: Hig
   return (
     <div 
       className={`bg-[#F8FAFC] rounded-lg p-6 h-[252px] w-[252px] relative border border-gray-100
-        transition-all duration-300 ease-in-out 
+        transition-all duration-200 ease-in-out 
         ${isHovered ? 'shadow-2xl scale-[1.03] z-10' : 'shadow-xl'}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -44,8 +44,12 @@ export default function HighlightedFeature({ title, description, iconName }: Hig
           {getIconComponent(iconName, isHovered)}
         </div>
         <div className="text-center">
-          <h3 className="mb-2 text-xl font-semibold transition-colors duration-300 ease-in-out ${isHovered ? 'text-blue-600' : 'text-gray-800'}">{title}</h3>
-          <p className="text-gray-600 text-sm">{description}</p>
+          <h3 
+            className="mb-2 text-xl font-semibold bg-gradient-to-r from-[#2A35A4] via-[#3E49B8] to-[#407FFF] bg-clip-text text-transparent transition-transform duration-200 ease-in-out"
+          >
+            {title}
+          </h3>
+          <p className="font-Satoshi font-[500] text-[16px] text-[#334155]">{description}</p>
         </div>
       </div>
     </div>

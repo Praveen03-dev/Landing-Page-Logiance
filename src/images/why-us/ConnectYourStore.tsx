@@ -3,6 +3,7 @@
         height?: number | string;
         fill?: string;
         weight?: number | string;
+        className?: string;
     }
     
     export const ConnectYourStoreImage = ({
@@ -10,9 +11,10 @@
         height = 16,
         fill = "#334155",
         weight = 2,
+        className = "",
     }: ConnectYourStoreImageProps) => {
         return (
-            <svg width="500" height="240" viewBox="0 0 500 240" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+            <svg width="500" height="240" viewBox="0 0 500 240" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" className={className}>
             <g clipPath="url(#clip0_684_26544)">
             <path d="M0 25.6C0 16.6392 0 12.1587 1.7439 8.73615C3.27787 5.72556 5.72556 3.27787 8.73615 1.7439C12.1587 0 16.6392 0 25.6 0H474.4C483.361 0 487.841 0 491.264 1.7439C494.274 3.27787 496.722 5.72556 498.256 8.73615C500 12.1587 500 16.6392 500 25.6V240H0V25.6Z" fill="#F8FAFC"/>
             <path d="M273 126.5C314.5 131 315 87.4999 357 103" stroke="url(#paint0_linear_684_26544)" strokeWidth="4"/>

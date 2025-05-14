@@ -3,6 +3,7 @@ interface PickTheBestCourierImageProps {
     height?: number | string;
     fill?: string;
     weight?: number | string;
+    className?: string;
   }
   
   export const PickTheBestCourierImage = ({
@@ -10,9 +11,10 @@ interface PickTheBestCourierImageProps {
     height = 16,
     fill = "#334155",
     weight = 2,
+    className = "",
   }: PickTheBestCourierImageProps) => {
     return (
-        <svg width="500" height="240" viewBox="0 0 500 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="500" height="240" viewBox="0 0 500 240" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
         <g clipPath="url(#clip0_684_27271)">
         <rect width="500" height="240" fill="#F8FAFC"/>
         <rect width="80" height="80" rx="8" transform="matrix(0.866025 0.5 -0.866025 0.5 50.2812 -14)" fill="#BDCBFD"/>

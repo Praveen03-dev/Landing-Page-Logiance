@@ -75,6 +75,21 @@ export default function FeatureCards() {
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] opacity-60 pointer-events-none z-0"
       />
 
+      {/* Radial blur for corner cards - positioned above the grid with a higher z-index */}
+      <div className="absolute inset-0 z-20 pointer-events-none">
+        {/* Top-left corner blur */}
+        <div className="absolute top-0 left-0 w-1/4 h-1/4 bg-white opacity-20 blur-md rounded-[12px]" />
+        
+        {/* Top-right corner blur */}
+        <div className="absolute top-0 right-0 w-1/4 h-1/4 bg-white opacity-20 blur-md rounded-[12px]" />
+        
+        {/* Bottom-left corner blur */}
+        <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-white opacity-20 blur-md rounded-[12px]" />
+        
+        {/* Bottom-right corner blur */}
+        <div className="absolute bottom-0 right-0 w-1/4 h-1/4 bg-white opacity-20 blur-md rounded-[12px]" />
+      </div>
+
       {/* Fixed grid layout with proper column and row definitions */}
       <div 
         className="relative z-10 grid gap-4 md:gap-6"
@@ -142,7 +157,6 @@ export default function FeatureCards() {
                   return 'auto';
                 })()
               }}
-              // Removed shadow-lg class that was causing the box-like appearance
             >
               <HighlightedFeature 
                 title={feature.title} 

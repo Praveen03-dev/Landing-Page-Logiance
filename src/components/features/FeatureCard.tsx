@@ -101,15 +101,15 @@ export default function FeatureCard({ title, iconName }: FeatureCardProps) {
   
   return (
     <div 
-      className={`bg-[#F8FAFC] rounded-[12px] p-4 w-[118px] h-[118px] relative border border-gray-100 transition-all duration-300 ease-in-out ${isHovered ? 'shadow-lg scale-105 z-10' : 'shadow-sm'}`}
+      className={`bg-[#F8FAFC] rounded-[12px] p-4 w-[118px] h-[118px] relative  transition-all duration-200 ease-in-out ${isHovered ? 'shadow-lg scale-105 z-10' : ''}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="flex flex-col h-full justify-center items-center">
-        <div className="mb-2 transition-transform duration-300 ease-in-out">
+        <div className="mb-2 transition-transform duration-200 ease-in-out">
           {getIconComponent(iconName, isHovered)}
         </div>
-        <p className={`text-sm font-medium text-[#64748B] text-center transition-colors duration-300 ease-in-out ${isHovered ? 'text-blue-600' : 'text-[#64748B]'}`}>
+        <p className={`font-Satoshi font-[500] text-[12px] text-center transition-colors duration-200 ease-in-out ${isHovered ? 'text-blue-600' : 'text-[#64748B]'}`}>
           {title}
         </p>
       </div>
